@@ -1,0 +1,107 @@
+{
+  "Switch":{
+    "SW1": {
+
+      "ip": "192.168.90.2",
+      "netmask": "255.255.255.0",
+      "default-gateway": "192.168.90.1",
+      "username": "admin",
+      "password": "cisco"
+    },
+     "SW2": {
+
+       "ip": "192.168.90.3",
+       "netmask": "255.255.255.0",
+       "default-gateway": "192.168.90.1",
+      "username": "admin",
+      "password": "cisco"
+    },
+     "SW3": {
+
+         "ip": "192.168.90.4",
+         "netmask": "255.255.255.0",
+         "default-gateway": "192.168.90.1",
+      "username": "admin",
+      "password": "cisco"
+    },
+     "SW4": {
+
+         "ip": "192.168.90.5",
+         "netmask": "255.255.255.0",
+         "default-gateway": "192.168.90.1",
+      "username": "admin",
+      "password": "cisco"
+    }
+  },
+  "Router": {
+    "R1": {
+      "G0/0": {
+        "G0/0.10": {
+          "address":
+            {
+              "ip": "192.168.10.5",
+              "netmask": "255.255.255.0"
+            }
+          ,
+          "standby": "192.168.10.1"
+        },
+        "G0/0.90": {
+          "address":
+            {
+              "ip": "192.168.90.251",
+              "netmask": "255.255.255.0"
+            }
+          ,
+          "standby": "192.168.90.1"
+        }
+      },
+      "G0/1": {
+        "address":
+          {
+            "ip": "10.10.20.1",
+            "netmask": "255.255.255.0"
+          }
+        ,
+        "standby": "10.10.20.4"
+      },
+      "username": "admin",
+      "password": "savnet"
+      },
+    "R2":
+    {
+       "G0/0": {
+        "G0/0.10": {
+          "address":
+            {
+              "ip": "192.168.10.6",
+              "netmask": "255.255.255.0"
+            }
+          ,
+          "standby": "192.168.10.1"
+        },
+        "G0/0.90": {
+          "address":
+            {
+              "ip": "192.168.90.6",
+              "netmask": "255.255.255.0"
+            }
+          ,
+          "standby": "192.168.90.1"
+        }
+      },
+      "G0/1":
+      {
+         "address":
+            {
+              "ip": "10.10.20.2",
+              "netmask": "255.255.255.0"
+            }
+          ,
+          "standby": "10.10.20.4"
+        }
+    },
+      "username": "admin",
+      "password": "savnet"
+
+}
+}
