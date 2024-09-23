@@ -1,0 +1,57 @@
+{
+  "Switch":{
+    "SW10": {
+
+      "ip": "20.20.20.3",
+      "netmask": "255.255.255.0",
+      "default-gateway": "20.20.20.1",
+      "username": "admin",
+      "password": "cisco"
+    }
+  },
+  "Router": {
+    "R3": {
+      "G0/1": {
+        "address":
+          {
+            "ip": "20.20.20.4",
+            "netmask": "255.255.255.0"
+          }
+        ,
+        "standby": "20.20.20.2"
+      },
+      "username": "admin",
+      "password": "savnet"
+      },
+    "R2":
+    {
+       "G0/1": {
+          "address":
+            {
+              "ip": "20.20.20.6",
+              "netmask": "255.255.255.0"
+            }
+          ,
+          "standby": "20.20.20.2"
+
+      },
+
+      "username": "admin",
+      "password": "savnet"
+    },
+    "ISP2":
+    {
+      "username": "admin",
+      "password": "savnet",
+      "G0/1":
+        {
+         "address":
+            {
+              "ip": "20.20.20.1",
+              "netmask": "255.255.255.0"
+            }
+        }
+
+    }
+  }
+}

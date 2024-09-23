@@ -1,5 +1,7 @@
 import json
 import re
+from time import sleep
+
 import SSHConnection as ssh
 import Switch as sw
 
@@ -29,30 +31,32 @@ def MainMenu():
     print("6. Exit")
 
 def SW_display():
-    i=1
+
     while True:
      for key,value in list_SW.items():
-        print(f"{i}.Configure {key}")
-        i+=1
-     print(f"{i}. Exit")
+        print(f"Configure {key}")
+     print(" Exit")
      opt=input("Choose an option: ")
      if re.match("SW[0-9]", opt):
          host=list_SW[opt]['ip']
          username = list_SW[opt]['username']
          password = list_SW[opt]['password']
-
-         # Use port 22 by default if not specified
-         port = 22  # Default SSH port
+         print(host)
 
          # Create an instance of SSHConnectionManager for each device (Singleton per device)
-         ssh_manager = ssh.SSHConnectionManager(host, username, password, port)
+         ssh_connection = ssh.SSHConnection(host, username, password)
+         ssh_connection.connect()
 
-         # Execute a command on the device
-         command_output = ssh_manager.execute_command('en\nclass\nsh run')
-         print(f"Command Output from {host}:\n{command_output}\n")
+         #sw.meniu()
+         shell = ssh_connection.shell
+         shell.send("enable\n")
+         shell.send("class\n")
+         shell.send("sh run")
+         sleep(3)
+         output = shell.recv(65535).decode("utf-8")
+         print(output)
 
-         sw.meniu()
-         ssh_manager.close_connection()
+         ssh_connection.close()
      elif opt=="exit":
          break
      else:
@@ -81,16 +85,26 @@ if __name__ == "__main__":
     while True:
         MainMenu()
         option = int(input("Choose an option: "))
+        list_SW=""
+        list_R=""
         if option == 1:
             list_SW = load_devices_SW("Customer_Office.json")
             list_R = load_devices_R("Customer_Office.json")
             LAN_WAN()
-        if option == 2:
+        elif option == 2:
+            list_SW = load_devices_SW("WAN1.json")
+            list_R = load_devices_R("WAN1.json")
             LAN_WAN()
-        if option == 3:
+        elif option == 3:
+            list_SW = load_devices_SW("WAN2.json")
+            list_R = load_devices_R("WAN2.json")
             LAN_WAN()
         elif option == 4:
             Internet()
+        elif option == 5:
+            list_SW = load_devices_SW("Data_Center.json")
+            list_R = load_devices_R("Data_Center.json")
+            LAN_WAN()
         elif option == 6:
             break
         else:

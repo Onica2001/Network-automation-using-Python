@@ -1,74 +1,75 @@
 {
   "Switch": {
-    "SW1": {
-      "ip": "192.168.90.2",
+    "SW6": {
+      "ip": "172.16.98.3",
       "netmask": "255.255.255.0",
-      "default-gateway": "192.168.90.1",
+      "default-gateway": "172.16.98.1",
       "username": "admin",
       "password": "cisco"
     },
-    "SW2": {
-      "ip": "192.168.90.3",
+    "SW7": {
+      "ip": "172.16.98.4",
       "netmask": "255.255.255.0",
-      "default-gateway": "192.168.90.1",
+      "default-gateway": "172.16.98.1",
       "username": "admin",
       "password": "cisco"
     },
-    "SW3": {
-      "ip": "192.168.90.5",
+    "SW8": {
+      "ip": "172.16.98.2",
       "netmask": "255.255.255.0",
-      "default-gateway": "192.168.90.1",
+      "default-gateway": "172.16.98.1",
       "username": "admin",
       "password": "cisco"
     },
-    "SW4": {
-      "ip": "192.168.90.4",
+    "SW9": {
+      "ip": "172.16.98.5",
       "netmask": "255.255.255.0",
-      "default-gateway": "192.168.90.1",
+      "default-gateway": "172.16.98.1",
       "username": "admin",
       "password": "cisco"
     }
   },
   "Router": {
-    "R1": {
+    "R3": {
       "G0/0": {
-        "G0/0.10": {
+        "G0/0.20": {
           "address": {
-            "ip": "192.168.10.5",
+            "ip": "172.16.20.251",
             "netmask": "255.255.255.0"
           },
-          "standby": "192.168.10.1"
+          "standby": "172.16.20.1"
         },
-        "G0/0.90": {
+        "G0/0.98": {
           "address": {
-            "ip": "192.168.90.251",
+            "ip": "172.16.98.251",
             "netmask": "255.255.255.0"
           },
-          "standby": "192.168.90.1"
+          "standby": "172.16.98.1"
         }
       },
       "username": "admin",
       "password": "savnet"
     },
-    "R2": {
+    "R4": {
       "G0/0": {
-        "G0/0.10": {
+        "G0/0.20": {
           "address": {
-            "ip": "192.168.10.6",
+            "ip": "172.16.20.252",
             "netmask": "255.255.255.0"
           },
-          "standby": "192.168.10.1"
+          "standby": "172.16.20.1"
         },
-        "G0/0.90": {
+        "G0/0.98": {
           "address": {
-            "ip": "192.168.90.6",
+            "ip": "172.16.98.252",
             "netmask": "255.255.255.0"
           },
-          "standby": "192.168.90.1"
+          "standby": "172.16.98.1"
         }
       },
-      "username": "admin",
-      "password": "savnet"
-    }
-  }
-}
+        "username": "admin",
+        "password": "savnet"
+      }
+
+   }
+ }
