@@ -3,8 +3,6 @@ from time import sleep
 import paramiko
 from multiprocessing import Lock
 
-from utils.decorators import log_decorator
-
 
 class SSHConnection:
     # Class variable to store instances of SSHConnection
@@ -22,7 +20,7 @@ class SSHConnection:
         # Return the instance
         return cls._instances[device.hostname]
 
-    @log_decorator
+
     def __init__(self, device):
         # Store the reference to the device
         self.device = device
@@ -30,7 +28,7 @@ class SSHConnection:
         self.client = None
         self.shell = None
 
-    @log_decorator
+
     def connect(self):
             """
             Establish SSH connection to the device.
@@ -57,7 +55,7 @@ class SSHConnection:
                     # Raise an exception if the connection fails
                     raise Exception(f"SSH connection failed: {e}")
 
-    @log_decorator
+
     def execute_command(self, command, wait=1):
         if self.shell:
             self.shell.send(command + "\n")
@@ -69,7 +67,7 @@ class SSHConnection:
             raise Exception("Shell not open. Please connect first.")
         return ""
 
-    @log_decorator
+
     def disconnect(self):
         """
         Close the SSH connection.

@@ -3,9 +3,8 @@ import re
 
 from devices.Router import Router
 from devices.Switch import Switch
-from utils.decorators import log_decorator
 
-@log_decorator
+
 def load_device_configs(config_file):
     """
     Load device configurations from a JSON file.
@@ -17,7 +16,7 @@ def load_device_configs(config_file):
     # Return the configurations
     return configs
 
-@log_decorator
+
 def verify_connectivity(devices_info,source,target,type_device):
     global target_ip, device
     for device_info in devices_info:
@@ -115,7 +114,7 @@ def switch():
             print("Invalid option!")
 
 
-@log_decorator
+
 def config_device(devices_info,list_opt,opt,type_device):
         for i in list_opt:
             for device_info in devices_info:

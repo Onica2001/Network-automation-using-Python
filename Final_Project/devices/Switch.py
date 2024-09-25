@@ -1,8 +1,6 @@
 
 # Import 'NetworkDevice' base class
 from devices.Base_Device import NetworkDevice
-# Import 'log_decorator' for logging
-from utils.decorators import log_decorator
 
 
 # Define the 'Switch' class inheriting from 'NetworkDevice'
@@ -10,7 +8,7 @@ class Switch(NetworkDevice):
     """
     Class representing a network switch.
     """
-    @log_decorator
+
     def configure_vlans(self, vlan):
         """
         Configure VLANs on the switch.
@@ -32,7 +30,7 @@ class Switch(NetworkDevice):
             out=self.execute_command(cmd)
             print(out)
 
-    @log_decorator
+
     def configure_rstp(self):
         """
         Configure RSTP.
@@ -48,7 +46,7 @@ class Switch(NetworkDevice):
             out = self.execute_command(cmd)
             print(out)
 
-    @log_decorator
+
     def configure_port_security(self, interfaces):
         """
         Configure port security on interfaces.
@@ -71,7 +69,7 @@ class Switch(NetworkDevice):
                 out = self.execute_command(cmd)
                 print(out)
 
-    @log_decorator
+
     def configure_stp(self,vlans,root):
         """
         Configure STP security features on interfaces.
@@ -92,7 +90,7 @@ class Switch(NetworkDevice):
             out = self.execute_command(cmd)
             print(out)
 
-    @log_decorator
+
     def configure_stp_security(self, interfaces):
         """
         Configure STP security features on interfaces.
@@ -114,7 +112,7 @@ class Switch(NetworkDevice):
                 out = self.execute_command(cmd)
                 print(out)
 
-    @log_decorator
+
     def verify_connectivity(self, target_ip):
         """
         Verify connectivity to a target IP.

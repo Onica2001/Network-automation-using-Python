@@ -1,16 +1,12 @@
-# devices/router.py
-
 # Import 'NetworkDevice' base class
 from devices.Base_Device import NetworkDevice
-from utils.decorators import log_decorator
-
 
 # Define the 'Router' class inheriting from 'NetworkDevice'
 class Router(NetworkDevice):
     """
     Class representing a network router.
     """
-    @log_decorator
+
     def configure_ripv2(self, networks):
         """
         Configure RIPv2 routing.
@@ -34,7 +30,7 @@ class Router(NetworkDevice):
             out=self.execute_command(cmd)
             print(out)
 
-    @log_decorator
+
     def configure_static_route(self, destination,subnet_mask, next_hop):
         """
         Configure a static route.
@@ -52,7 +48,7 @@ class Router(NetworkDevice):
             out=self.execute_command(cmd)
             print(out)
 
-    @log_decorator
+
     def configure_hsrp(self, track,interface_track,interface,ip_address,subnet_mask, group, virtual_ip,priority):
         """
         Configure HSRP on an interface.
@@ -77,7 +73,7 @@ class Router(NetworkDevice):
             out=self.execute_command(cmd)
             print(out)
 
-    @log_decorator
+
     def configure_dhcp_pool(self,excluded_address, pool_name, network,subnet_mask, default_router):
         """
         Configure a DHCP pool.
@@ -100,7 +96,6 @@ class Router(NetworkDevice):
             out=self.execute_command(cmd)
             print(out)
 
-    @log_decorator
     def verify_connectivity(self, target_ip):
         """
         Verify connectivity to a target IP.
