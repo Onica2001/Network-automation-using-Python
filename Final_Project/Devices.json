@@ -1,0 +1,156 @@
+{
+  "Switches": [
+    {
+      "hostname": "Switch1",
+      "ip": "192.168.90.2",
+      "username": "admin",
+      "password": "cisco",
+      "vlan": [30, 40],
+      "interfaces": ["GigabitEthernet0/0"],
+      "stp_security": ["GigabitEthernet0/0"]
+    },
+     {
+      "hostname": "Switch2",
+       "username": "admin",
+      "password": "cisco",
+       "vlan": [30, 40],
+      "ip": "192.168.90.3"
+    },
+     {
+      "hostname": "Switch3",
+      "ip": "192.168.90.5",
+       "username": "admin",
+      "password": "cisco",
+       "vlan": [30, 40],
+        "interfaces": ["GigabitEthernet0/0"],
+       "stp_security": ["GigabitEthernet0/0"]
+    },
+     {
+      "hostname": "Switch4",
+       "username": "admin",
+      "password": "cisco",
+       "vlan": [30, 40],
+      "ip": "192.168.90.4"
+    },
+    {
+      "hostname": "Switch5",
+       "username": "admin",
+      "password": "cisco",
+       "vlan": [30, 40],
+      "ip": "10.10.20.5"
+    },
+     {
+      "hostname": "Switch6",
+       "username": "admin",
+      "password": "cisco",
+       "vlan": [30, 40],
+      "ip": "172.16.98.3"
+    },
+     {
+      "hostname": "Switch7",
+       "username": "admin",
+      "password": "cisco",
+       "vlan": [30, 40],
+      "ip": "172.16.98.4"
+    },
+   {
+      "hostname": "Switch8",
+     "username": "admin",
+      "password": "cisco",
+     "vlan": [30, 40],
+      "ip": "172.16.98.2"
+    },
+    {
+      "hostname": "Switch9",
+      "username": "admin",
+      "password": "cisco",
+      "vlan": [30, 40],
+      "ip": "172.16.98.5"
+    },
+    {
+      "hostname": "Switch10",
+      "username": "admin",
+      "password": "cisco",
+      "vlan": [30, 40],
+      "ip": "20.20.20.5"
+    }
+
+  ],
+  "Routers": [
+     {
+      "hostname": "Router1",
+       "username": "admin",
+      "password": "savnet",
+      "ip": "10.10.20.1"
+     },
+     {
+      "hostname": "Router2",
+       "username": "admin",
+      "password": "savnet",
+      "ip": "10.10.20.2"
+    },
+     {
+      "hostname": "ISP1",
+      "username": "admin",
+      "password": "savnet",
+      "ip": "10.10.20.3",
+      "interfaces": {
+                "GigabitEthernet0/0": "30.30.30.1",
+                "GigabitEthernet0/1": "10.10.20.3"
+            }
+     },
+     {
+      "hostname": "RouterLAN",
+      "username": "admin",
+      "password": "savnet",
+      "ip": "30.30.30.2",
+      "interfaces": {
+                "GigabitEthernet0/0": "30.30.30.2",
+                "GigabitEthernet0/1": "50.50.50.1"
+            }
+     },
+     {
+      "hostname": "R5",
+      "username": "admin",
+      "password": "savnet",
+      "ip": "50.50.50.2",
+      "interfaces": {
+                "GigabitEthernet0/0": "50.50.50.2",
+                "GigabitEthernet0/1": "60.60.60.0"
+            }
+     },
+     {
+      "hostname": "RouterServer",
+      "username": "admin",
+      "password": "savnet",
+      "ip": "40.40.40.1",
+      "interfaces": {
+                "GigabitEthernet0/0": "60.60.60.2",
+                "GigabitEthernet0/1": "40.40.40.1"
+            }
+     },
+     {
+      "hostname": "ISP2",
+      "username": "admin",
+      "password": "savnet",
+      "ip": "20.20.20.1",
+      "interfaces": {
+                "GigabitEthernet0/0": "40.40.40.2",
+                "GigabitEthernet0/1": "20.20.20.1"
+            }
+     },
+    {
+      "hostname": "Router3",
+      "username": "admin",
+      "password": "savnet",
+      "ip": "20.20.20.4"
+    },
+
+    {
+      "hostname": "Router4",
+      "username": "admin",
+      "password": "savnet",
+      "ip": "20.20.20.6"
+    }
+  ]
+}
