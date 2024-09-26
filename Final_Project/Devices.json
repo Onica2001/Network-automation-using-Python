@@ -51,14 +51,18 @@
        "username": "admin",
       "password": "cisco",
        "vlan": [30, 40],
-      "ip": "172.16.98.4"
+      "ip": "172.16.98.4",
+        "interfaces": ["GigabitEthernet0/0"],
+      "stp_security": ["GigabitEthernet0/0"]
     },
    {
       "hostname": "Switch8",
      "username": "admin",
       "password": "cisco",
      "vlan": [30, 40],
-      "ip": "172.16.98.2"
+      "ip": "172.16.98.2",
+      "interfaces": ["GigabitEthernet0/0"],
+      "stp_security": ["GigabitEthernet0/0"]
     },
     {
       "hostname": "Switch9",
@@ -72,7 +76,7 @@
       "username": "admin",
       "password": "cisco",
       "vlan": [30, 40],
-      "ip": "20.20.20.5"
+      "ip": "20.20.20.3"
     }
 
   ],

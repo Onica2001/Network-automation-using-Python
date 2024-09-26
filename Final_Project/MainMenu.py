@@ -59,7 +59,7 @@ def switch():
                 list_opt=opt.split(',')
                 config_device(devices_info,list_opt,'vlan',Switch)
             else: raise ValueError
-         if option==2:
+         elif option==2:
             for device_info in devices_info:
              print(f"Configure {device_info['hostname']}")
             opt = input("Choose switch: ")
