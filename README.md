@@ -892,7 +892,7 @@ def configure_dhcp_pool(self, excluded_address, pool_name, network, subnet_mask,
     commands = [
         'enable', 'class', 'configure terminal',
         f'ip dhcp pool {pool_name}', f'network {network} {subnet_mask}',
-        f'default-router {default_router}', 'dns-server 8.8.8.8'
+        f'default-router {default_router}', 'dns-server 8.8.8.8', 'exit'
     ]
     for ip in excluded_address:
         commands.append(f'ip dhcp excluded-address {ip}')
