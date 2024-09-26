@@ -92,7 +92,7 @@ The Network Automation Tool uses a JSON configuration file to define the network
 ### Example Configuration
 Here is an example of what the JSON configuration might look like for multiple switches and routers:
 ```json
- {
+{
   "Switches": [
     {
       "hostname": "Switch1",
@@ -145,14 +145,18 @@ Here is an example of what the JSON configuration might look like for multiple s
        "username": "admin",
       "password": "cisco",
        "vlan": [30, 40],
-      "ip": "172.16.98.4"
+      "ip": "172.16.98.4",
+        "interfaces": ["GigabitEthernet0/0"],
+      "stp_security": ["GigabitEthernet0/0"]
     },
    {
       "hostname": "Switch8",
      "username": "admin",
       "password": "cisco",
      "vlan": [30, 40],
-      "ip": "172.16.98.2"
+      "ip": "172.16.98.2",
+      "interfaces": ["GigabitEthernet0/0"],
+      "stp_security": ["GigabitEthernet0/0"]
     },
     {
       "hostname": "Switch9",
