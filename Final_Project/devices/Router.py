@@ -88,6 +88,7 @@ class Router(NetworkDevice):
             f'network {network} {subnet_mask}',
             f'default-router {default_router}',
             'dns-server 8.8.8.8',
+            'exit'
         ]
         for ip in excluded_address:
             commands.append(f'ip dhcp excluded-address {ip}')
