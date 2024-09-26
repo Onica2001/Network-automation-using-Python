@@ -22,7 +22,7 @@
 
 ---
 ## Introduction
-The Network Automation Tool is a Python application designed to automate the configuration and management of network devices across various locations, such as "Customer Offices" and "Data Centers." It utilizes advanced Python concepts, including object-oriented programming (OOP), multiprocessing, and decorators, to offer a scalable and efficient solution for network administrators.
+### The Network Automation Tool is a Python application designed to automate the configuration and management of network devices across various locations, such as "Customer Offices" and "Data Centers." It utilizes advanced Python concepts, including object-oriented programming (OOP), multiprocessing, and decorators, to offer a scalable and efficient solution for network administrators.
 ---
 ## Features
 
